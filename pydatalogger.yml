@@ -1,0 +1,61 @@
+sensors:
+
+  SENSOR_DUMMY:
+    enabled: true
+    parameters:
+      address: '/dev/dummy'
+
+  SENSOR_BME280:
+    enabled: true
+    parameters:
+      address: 0x77
+
+  SENSOR_BMP180:
+    enabled: true
+    # Use device on I2C bus=1, address=0x77
+    parameters:
+      bus: 1
+      address: 0x77
+
+  SENSOR_DHT11:
+    enabled: true
+    parameters:
+      address: 17
+
+  SENSOR_DS18B20_SYSFS:
+    enabled: true
+    parameters:
+      address: '28-00000736781c'
+
+  SENSOR_DS18B20_OWFS:
+    enabled: true
+    parameters:
+      address: '28-00000736781c'
+
+  SENSOR_SDS011:
+    enabled: true
+    parameters:
+      address: '/dev/ttyUSB0'
+
+  SENSOR_HX711:
+    enabled: true
+    parameters:
+      dout_pin: 5
+      pdsck_pin: 6
+      channel: 'A'
+      gain: 64
+
+  SENSOR_ABE_DELTA_SIGMA_ADC:
+    # Initialize the ADC device using the default addresses.
+    # Set sample rate to 18 and amplifier gain to 8.
+    enabled: true
+    parameters:
+      address: 0x68
+      address2: 0x69
+      samplerate: 18
+      gain: 8
+      channels:
+        - 1
+        - 2
+        - 3
+        - 4
