@@ -74,10 +74,10 @@ Usage
 *******
 Credits
 *******
-- `RPi-Beelogger`_ by Markus Hies, see `Beelogger Version 2`_.
-- `Hiverize-Sensorbeuten`_ by Uni Bremen, see
+- `RPi-Beelogger`_ by Markus Hies, see `Beelogger Version 2`_
+- `Hiverize-Sensorbeuten`_ by Hiverize_
 - `luftdaten-python`_ for luftdaten.info sensor network
-- BERadio_ by Hiveeyes
+- BERadio_ by Hiveeyes_
 
 
 .. _RPi-Beelogger: https://github.com/beelogger/RPi-Beelogger
@@ -86,3 +86,4 @@ Credits
 .. _Hiverize: https://hiverize.org/
 .. _luftdaten-python: https://github.com/corny/luftdaten-python
 .. _BERadio: https://github.com/hiveeyes/beradio
+.. _Hiveeyes: https://hiveeyes.org
