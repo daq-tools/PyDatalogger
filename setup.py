@@ -32,7 +32,7 @@ extras = {
 }
 
 setup(name='pydatalogger',
-      version='0.0.0',
+      version='0.1.0',
       description='PyDatalogger - Data logging made easy',
       long_description=README,
       license="AGPL 3, EUPL 1.2",
