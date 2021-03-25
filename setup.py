@@ -13,7 +13,7 @@ requires = [
     'docopt==0.6.2',
     'attrs==18.2.0',
     'munch==2.3.2',
-    'pyyaml==3.13',
+    'pyyaml==5.4',
 
     # Sensor adapters (sources)
     'sensor==5',
