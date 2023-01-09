@@ -7,7 +7,7 @@
 # Configuration
 # -------------
 
-$(eval venvpath     := .venv_util)
+$(eval venvpath     := .venv)
 $(eval pip          := $(venvpath)/bin/pip)
 $(eval python       := $(venvpath)/bin/python)
 $(eval pytest       := $(venvpath)/bin/pytest)
@@ -17,7 +17,8 @@ $(eval sphinx       := $(venvpath)/bin/sphinx-build)
 
 # Setup Python virtualenv
 setup-virtualenv:
-	@test -e $(python) || `command -v virtualenv` --python=python3 --no-site-packages $(venvpath)
+	@test -e $(python) || python3 -m venv $(venvpath)
+	@$(pip) install --upgrade --prefer-binary wheel
 
 
 # -------
@@ -28,6 +29,15 @@ setup-virtualenv:
 # Synopsis:
 #   make release bump=minor  (major,minor,patch)
 release: bumpversion push sdist pypi-upload
+
+
+# ----
+# Test
+# ----
+
+test: setup-virtualenv
+	@$(pip) install --editable=.[test] --upgrade
+	@$(pytest)
 
 
 # ===============
