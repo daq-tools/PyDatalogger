@@ -8,26 +8,26 @@ README = open(os.path.join(here, 'README.rst')).read()
 requires = [
 
     # Core
-    'six==1.11.0',
-    'appdirs==1.4.3',
-    'docopt==0.6.2',
-    'attrs==18.2.0',
-    'munch==2.3.2',
-    'pyyaml==5.4',
+    'six<2',
+    'appdirs<2',
+    'docopt<1',
+    'attrs<23',
+    'munch<3',
+    'pyyaml<6',
 
     # Sensor adapters (sources)
-    'sensor==5',
+    'sensor<6',
     'hx711==1.1.2.3',
 
     # Data output adapters (sinks)
-    'paho-mqtt==1.4.0',
+    'paho-mqtt<2',
 
 ]
 
 extras = {
     'test': [
-        'pytest==4.0.1',
-        'pytest-cov==2.6.0',
+        'pytest<8',
+        'pytest-cov<5',
     ],
 }
 
